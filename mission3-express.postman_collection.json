@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "1717d6d0-5989-4c67-9088-0346c46ccb9a",
+		"name": "mission3-express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34304010"
+	},
+	"item": [
+		{
+			"name": "取得所有貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mission3-express.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"mission3-express",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\":\"Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, perspiciatis!\",\n    \"name\":\"Tatsu\",\n    \"likes\":30,\n    \"comment\":45\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mission3-express.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"mission3-express",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://mission3-express.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"mission3-express",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://mission3-express.onrender.com/posts/6645ad98ebd0ab75fb67309b",
+					"protocol": "https",
+					"host": [
+						"mission3-express",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts",
+						"6645ad98ebd0ab75fb67309b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯單筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\":\"update\",\n    // \"name\":\"new name\",\n    \"tags\":[\"心情\",\"旅遊\"]\n    // \"likes\":123,\n    // \"comment\":456\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mission3-express.onrender.com/posts/6645ad9aebd0ab75fb67309f",
+					"protocol": "https",
+					"host": [
+						"mission3-express",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts",
+						"6645ad9aebd0ab75fb67309f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
