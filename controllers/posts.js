@@ -10,7 +10,7 @@ const posts = {
   async createPosts(req, res) {
     try {
       const data = req.body;
-      if (data.content) {
+      if (data.content.trim()) {
         const newPost = await Post.create({
           content: data.content,
           name: data.name,
@@ -50,7 +50,7 @@ const posts = {
       const data = req.body;
       const id = req.params.id;
       const isExist = await Post.findById(id);
-      if (data.content && isExist) {
+      if (data.content.trim() && isExist) {
         const updatePost = await Post.findByIdAndUpdate(
           id,
           {
