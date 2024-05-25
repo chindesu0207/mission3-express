@@ -6,6 +6,7 @@ function handleError(res, error) {
     message = "Input error" 
   }
   const output = {
+    code:400,
     success: false,
     message,
   };
